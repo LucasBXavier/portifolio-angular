@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=SUSE:wght@100..800&display=swap");
+
+$cor--principal: #000;
+$cor--secundaria: #f6f6f6;
+$cor--terciaria: #22d4fd;
+$cor--hover: #272727;
+
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Espaça o nome à esquerda e os links à direita */
+  align-items: center; /* Centraliza verticalmente os itens na navbar */
+  padding: 35px 100px; /* Ajuste de padding para um espaço uniforme */
+}
+
+.nome {
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  color: $cor--secundaria;
+}
+
+.nome:hover {
+  cursor: pointer;
+}
+
+#clicou {
+  text-decoration: none;
+  color: inherit;
+}
+
+span {
+  color: $cor--terciaria;
+}
+
+.links {
+  display: flex;
+  justify-content: flex-end; /* Alinha os links à direita */
+  align-items: center; /* Alinha os itens verticalmente */
+  gap: 80px; /* Espaçamento entre os links */
+
+  a {
+    position: relative; /* Necessário para o posicionamento absoluto do pseudo-elemento */
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: $cor--secundaria;
+    text-decoration: none;
+    font-family: "SUSE", sans-serif;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 1px;
+      bottom: -7px;
+      left: 0;
+      background: linear-gradient(270deg, $cor--terciaria 0%, #17161d 100%);
+      transform-origin: bottom right;
+      transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+$cor--principal: #000;
+$cor--secundaria: #f6f6f6;
+$cor--terciaria: #22d4fd;
+$cor--hover: #272727;
+
+footer {
+  position: fixed;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  background-color: $cor--principal;
+  padding: 24px;
+  font-weight: 400;
+  font-family: "Dancing Script", cursive;
+}
+
+.copy {
+  margin-bottom: 10px;
+  color: #fff;
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.copy a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.copy a:hover {
+  color: $cor--terciaria;
+}

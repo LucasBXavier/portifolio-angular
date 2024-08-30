@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap");
+
+$cor--principal: #000;
+$cor--secundaria: #f6f6f6;
+$cor--terciaria: #22d4fd;
+$cor--hover: #272727;
+
+article {
+  padding: 8% 15%;
+  display: flex;
+  justify-content: left; /* Já está alinhando à esquerda */
+  align-items: center; /* Para centralizar verticalmente */
+  height: 40vh; /* Para ocupar a altura total da viewport */
+}
+
+h1 {
+  color: $cor--secundaria; /* Certifique-se de que a variável está definida corretamente */
+  font-size: 3em; /* Ajuste o tamanho conforme necessário */
+  margin: 0;
+  padding: 0;
+  font-family: "SUSE", sans-serif;
+}
+
+#typewriter {
+  color: $cor--secundaria; /* Certifique-se de que a variável está definida corretamente */
+  font-size: 1.5em; /* Ajuste o tamanho conforme necessário */
+  margin-top: 10px;
+  font-family: "SUSE", sans-serif;
+  white-space: wrap; /* Para evitar quebra de linha */
+}
+
+#typewriter:after {
+  content: "|";
+  margin-left: 8px;
+  opacity: 1;
+  animation: blink 1s infinite;
+  color: $cor--terciaria;
+}
+
+@keyframes blink {
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
