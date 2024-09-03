@@ -7,14 +7,16 @@ import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { SobreMimComponent } from './sobreMim/sobreMim.component';
+import { ExperienciasComponent } from './experiencias/experiencias.component';
 
 @NgModule({
-  declarations: [	
+  declarations: [		
     AppComponent,
     NavComponent,
     FooterComponent,
     PrincipalComponent,
-      SobreMimComponent
+      SobreMimComponent,
+      ExperienciasComponent
    ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

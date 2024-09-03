@@ -1,7 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@import "./app/app.component.scss";
 * {
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -14,4 +18,18 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: $cor--hover;
+  border-radius: 1px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: $cor--terciaria;
+  border-radius: 10px;
 }
