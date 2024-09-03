@@ -1,0 +1,24 @@
+@import "/src/app/app.component.scss";
+
+article {
+  padding: 8% 15%;
+  display: flex;
+  justify-content: left; /* Já está alinhando à esquerda */
+  align-items: center; /* Para centralizar verticalmente */
+  height: 40vh; /* Para ocupar a altura total da viewport */
+  margin-bottom: 470px;
+  margin-top: 270px;
+}
+
+.experiencia {
+  padding: 8% 0;
+  width: 50%;
+}
+
+h1 {
+  color: $cor--secundaria;
+}
+
+span {
+  color: $cor--terciaria;
+}

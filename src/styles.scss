@@ -9,13 +9,12 @@ html {
 }
 
 body {
-  // background-color: #111;
+  //background-color: #111;
   background-image: url("assets/images/wallpaper.jpg");
   min-height: 500px;
 
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -32,4 +31,10 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: $cor--terciaria;
   border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  body {
+    width: auto;
+  }
 }
