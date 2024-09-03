@@ -1,10 +1,6 @@
-$cor--principal: #000;
-$cor--secundaria: #f6f6f6;
-$cor--terciaria: #22d4fd;
-$cor--hover: #272727;
+@import "../app.component.scss";
 
 footer {
-  position: fixed;
   text-align: center;
   padding: 10px 0;
   width: 100%;

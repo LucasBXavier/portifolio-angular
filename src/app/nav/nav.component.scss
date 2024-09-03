@@ -1,33 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=SUSE:wght@100..800&display=swap");
-
-$cor--principal: #000;
-$cor--secundaria: #f6f6f6;
-$cor--terciaria: #22d4fd;
-$cor--hover: #272727;
+@import "../app.component.scss";
 
 .navbar {
   display: flex;
-  justify-content: space-between; /* Espaça o nome à esquerda e os links à direita */
+  justify-content: space-between; /* Espaça o nome à esquerda e o botão off-canvas à direita */
   align-items: center; /* Centraliza verticalmente os itens na navbar */
   padding: 35px 100px; /* Ajuste de padding para um espaço uniforme */
-}
-
-.nome {
-  font-family: "DM Serif Text", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 2rem;
-  color: $cor--secundaria;
+  position: relative; /* Adiciona contexto para o posicionamento do botão off-canvas */
 }
 
 .nome:hover {
   cursor: pointer;
 }
 
-#clicou {
+.logo {
   text-decoration: none;
   color: inherit;
+  font-family: "DM Serif Text", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+  color: $cor--secundaria;
+  display: inline-block;
+  margin-left: 20px;
+  margin-bottom: 0;
 }
 
 span {
@@ -36,9 +33,8 @@ span {
 
 .links {
   display: flex;
-  justify-content: flex-end; /* Alinha os links à direita */
-  align-items: center; /* Alinha os itens verticalmente */
   gap: 80px; /* Espaçamento entre os links */
+  align-items: center; /* Alinha os itens verticalmente */
 
   a {
     position: relative; /* Necessário para o posicionamento absoluto do pseudo-elemento */
@@ -69,5 +65,74 @@ span {
     &:hover {
       cursor: pointer;
     }
+  }
+}
+
+.ofcanvas-btn {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  z-index: 990;
+  top: 38px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: $cor--terciaria;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Animação do botão off-canvas */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-315deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+  transform: translate(0, 11px) rotate(-315deg);
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(315deg);
+}
+
+.ofcanvas {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #343a40; /* Ajuste a cor de fundo conforme necessário */
+  overflow-x: hidden;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.ofcanvas.active {
+  left: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 35px 20px; /* Reduz o padding em dispositivos móveis */
+  }
+
+  .links {
+    display: none; /* Oculta os links em dispositivos móveis */
+  }
+
+  .ofcanvas-btn {
+    display: block; /* Exibe o botão off-canvas em dispositivos móveis */
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .ofcanvas-btn {
+    display: none; /* Oculta o botão off-canvas em telas maiores */
   }
 }
