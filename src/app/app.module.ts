@@ -7,21 +7,19 @@ import { NavComponent } from './nav/nav.component';
 import { FooterComponent } from './footer/footer.component';
 import { PrincipalComponent } from './principal/principal.component';
 import { SobreMimComponent } from './sobreMim/sobreMim.component';
-import { ExperienciasComponent } from './experiencias/experiencias.component';
 import { SkillsComponent } from './skills/skills.component';
 import { ProjetosComponent } from './projetos/projetos.component';
 
 @NgModule({
-  declarations: [				
+  declarations: [
     AppComponent,
     NavComponent,
     FooterComponent,
     PrincipalComponent,
-      SobreMimComponent,
-      ExperienciasComponent,
-      SkillsComponent,
-      ProjetosComponent
-   ],
+    SobreMimComponent,
+    SkillsComponent,
+    ProjetosComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

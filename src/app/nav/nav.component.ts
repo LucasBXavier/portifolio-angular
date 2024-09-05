@@ -6,13 +6,21 @@ import { Component, OnInit, ElementRef } from '@angular/core';
   styleUrls: ['./nav.component.scss'],
 })
 export class NavComponent {
-  toggleofcanvas(): void {
-    const menuBtn = document.querySelector('#ofcanvas-btn');
-    const ofcanvas = document.querySelector('#ofcanvas');
+  isOffcanvasOpen: boolean = false;
 
-    if (menuBtn && ofcanvas) {
-      menuBtn.classList.toggle('change');
-      ofcanvas.classList.toggle('active');
+  toggleOffcanvas(): void {
+    this.isOffcanvasOpen = !this.isOffcanvasOpen;
+    const offcanvas = document.getElementById('offcanvas');
+    const btn = document.getElementById('ofcanvas-btn');
+
+    if (offcanvas && btn) {
+      if (this.isOffcanvasOpen) {
+        offcanvas.classList.add('open');
+        btn.classList.add('change');
+      } else {
+        offcanvas.classList.remove('open');
+        btn.classList.remove('change');
+      }
     }
   }
 }

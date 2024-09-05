@@ -1,0 +1,85 @@
+@import "../app.component.scss";
+
+.skills-section {
+  text-align: center;
+  color: white;
+
+  h2 {
+    margin-top: 290px;
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  span {
+    color: $cor--terciaria;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 colunas no desktop */
+  gap: 20px; /* Espaço entre os itens */
+  justify-content: center;
+  padding: 200px;
+  width: auto;
+
+  .grid-item {
+    background-color: #222;
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    border-bottom: 3px solid $cor--terciaria;
+    min-height: 150px;
+
+    i {
+      font-size: 3rem; /* Tamanho dos ícones */
+      margin-bottom: 10px; /* Espaçamento entre o ícone e o texto */
+      color: $cor--terciaria; /* Cor dos ícones */
+    }
+
+    p {
+      margin: 0;
+    }
+
+    &:hover {
+      transform: translateY(-10px); /* Efeito hover */
+    }
+  }
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas para telas médias */
+    padding: 100px;
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas para tablets */
+    padding: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas para smartphones */
+    padding: 60px;
+    gap: 15px; /* Menor espaço entre os itens */
+  }
+}
+
+@media (max-width: 400px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* 1 coluna para telas muito pequenas */
+    padding: 40px;
+    gap: 10px;
+  }
+}
