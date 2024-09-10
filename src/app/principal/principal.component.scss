@@ -1,18 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap");
+@import "../app.component.scss";
 
-$cor--principal: #000;
-$cor--secundaria: #f6f6f6;
-$cor--terciaria: #22d4fd;
-$cor--hover: #272727;
-
-article {
+section {
   padding: 8% 15%;
   display: flex;
   justify-content: left; /* Já está alinhando à esquerda */
   align-items: center; /* Para centralizar verticalmente */
   height: 40vh; /* Para ocupar a altura total da viewport */
   margin-bottom: 300px;
-  margin-top: 270px;
+  margin-top: 400px;
 }
 
 h1 {
@@ -49,12 +45,16 @@ h1 {
 }
 
 @media (max-width: 768px) {
+  section {
+    margin-top: 270px;
+  }
+
   h1 {
-    font-size: 2em;
+    font-size: 1.7em;
   }
 
   #typewriter {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 0;
   }
 }

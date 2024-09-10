@@ -20,10 +20,11 @@
   gap: 20px; /* Espaço entre os itens */
   justify-content: center;
   padding: 200px;
+  padding-top: 100px;
   width: auto;
 
   .grid-item {
-    background-color: #222;
+    background-color: $cor--hover;
     border-radius: 15px;
     padding: 20px;
     color: white;
@@ -35,7 +36,7 @@
     align-items: center;
     transition: transform 0.3s ease;
     border-bottom: 3px solid $cor--terciaria;
-    min-height: 150px;
+    min-height: 120px;
 
     i {
       font-size: 3rem; /* Tamanho dos ícones */
@@ -78,8 +79,11 @@
 
 @media (max-width: 400px) {
   .grid-container {
-    grid-template-columns: 1fr; /* 1 coluna para telas muito pequenas */
-    padding: 40px;
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 1 coluna para telas muito pequenas */
+    padding: 30px;
     gap: 10px;
   }
 }

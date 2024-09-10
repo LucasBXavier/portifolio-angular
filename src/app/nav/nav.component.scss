@@ -9,7 +9,8 @@
   top: 0; /* Alinha a navbar ao topo da página */
   width: 100%; /* Garante que a navbar ocupe toda a largura */
   z-index: 1000;
-  //background-color: $cor--principal;
+  background-color: $cor--principal;
+  border-bottom: 2px solid $cor--terciaria;
 }
 
 .nome:hover {
@@ -52,7 +53,7 @@ span {
       width: 100%;
       transform: scaleX(0);
       height: 1px;
-      bottom: -7px;
+      bottom: 0;
       left: 0;
       background: linear-gradient(270deg, $cor--terciaria 0%, #17161d 100%);
       transform-origin: bottom right;
@@ -175,5 +176,8 @@ h1 {
   .links {
     display: none;
     font-size: 1em;
+  }
+  .logo {
+    font-size: 1.7em;
   }
 }
