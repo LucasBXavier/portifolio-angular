@@ -37,6 +37,7 @@
     transition: transform 0.3s ease;
     border-bottom: 3px solid $cor--terciaria;
     min-height: 120px;
+    cursor: default;
 
     i {
       font-size: 3rem; /* Tamanho dos ícones */

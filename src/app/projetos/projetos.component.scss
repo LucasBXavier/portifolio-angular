@@ -1,0 +1,123 @@
+@import "../app.component.scss";
+
+// section {
+//   text-align: center;
+//   color: white;
+
+//   h2 {
+//     margin-top: 290px;
+//     font-size: 2rem;
+//     margin-bottom: 0;
+//   }
+// }
+.projects-section {
+  padding: 2rem;
+  margin-top: 180px;
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: $cor--secundaria;
+  }
+  span {
+    color: $cor--terciaria;
+  }
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 100px 0 200px 0;
+  align-items: center;
+  justify-items: center;
+}
+.project-card {
+  background-color: #2b2b2b;
+  border-radius: 10px;
+  padding: 0 0 16px 0;
+  border-bottom: 3px solid $cor--terciaria;
+  text-align: center;
+  color: #fff;
+  max-width: 470px;
+  transition: transform 0.3s ease-in-out;
+
+  img {
+    width: 100%;
+    height: 280px;
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 1rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .view-project-btn {
+    background-color: #2b2b2b;
+    color: $cor--terciaria;
+    border: 1px solid $cor--terciaria;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    &:hover {
+      box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+      transform: scale(1.05);
+      color: #2b2b2b;
+      background-color: $cor--terciaria;
+    }
+    &:disabled {
+      background-color: #2b2b2b;
+      color: grey;
+      transform: none;
+      box-shadow: none;
+      border: 1px solid grey;
+    }
+  }
+  &:hover {
+    transform: translateY(-10px); /* Efeito hover */
+  }
+}
+@media (max-width: 768px) {
+  .projects-grid {
+    padding: 40px 0;
+    grid-template-columns: 1fr; // Colunas únicas em dispositivos móveis
+  }
+
+  .project-card {
+    max-width: 100%; // Ajusta o tamanho máximo para se ajustar à tela
+    padding: 2rem; // Adiciona padding interno para telas menores
+  }
+
+  h2 {
+    font-size: 1.5rem; // Reduz o tamanho da fonte para títulos em dispositivos móveis
+  }
+
+  .project-card img {
+    height: auto;
+  }
+
+  .view-project-btn {
+    padding: 0.5rem 1rem; // Ajusta o padding do botão para telas menores
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.25rem; // Reduz ainda mais o tamanho da fonte do título em telas muito pequenas
+  }
+
+  .project-card h3 {
+    font-size: 1.25rem; // Reduz o tamanho da fonte do subtítulo
+  }
+
+  .project-card p {
+    font-size: 0.875rem; // Reduz o tamanho da fonte do parágrafo
+  }
+}
