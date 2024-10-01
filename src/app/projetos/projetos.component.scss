@@ -58,6 +58,13 @@
     margin-bottom: 1rem;
   }
 
+.tecnologias i {
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin-right: 8px;
+}
+
   .view-project-btn {
     background-color: #2b2b2b;
     color: $cor--terciaria;
@@ -92,7 +99,6 @@
 
   .project-card {
     max-width: 100%; // Ajusta o tamanho máximo para se ajustar à tela
-    padding: 2rem; // Adiciona padding interno para telas menores
   }
 
   h2 {
@@ -118,6 +124,6 @@
   }
 
   .project-card p {
-    font-size: 0.875rem; // Reduz o tamanho da fonte do parágrafo
+    font-size: 0.87rem; // Reduz o tamanho da fonte do parágrafo
   }
 }
