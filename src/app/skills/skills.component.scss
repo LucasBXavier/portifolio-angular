@@ -16,7 +16,7 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 colunas no desktop */
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas no desktop */
   gap: 20px; /* Espaço entre os itens */
   justify-content: center;
   padding: 200px;
